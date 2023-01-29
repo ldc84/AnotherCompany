@@ -1,0 +1,39 @@
+// CSS Grid layout
+html,
+body {
+  height: 100%;
+}
+
+body {
+
+  background-color:#f9f9f9;
+
+  &.over-hidden {
+    overflow: hidden;
+  }
+}
+
+// wrap
+#wrap {
+  
+}
+
+// container
+.container-1 {
+  max-width:990px;
+  margin:0 auto;
+}
+
+.pc-only {
+  // mobile
+  @include mediaQuery($deviceSmall){
+    display: none;
+  }
+}
+.m-only {
+  display: none;
+  // mobile
+  @include mediaQuery($deviceSmall){
+    display: block;
+  }
+}
