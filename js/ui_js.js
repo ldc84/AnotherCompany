@@ -1,0 +1,1 @@
+!function(i){i(function(){i(window);var n=i("body"),o=i("#header");o.find(".menu").on("click",function(){return n.toggleClass("over-hidden"),o.toggleClass("active"),!1})}),i(function(){AOS.init(),i(window).on("load",function(){AOS.refresh()})})}(jQuery);
