@@ -51,7 +51,10 @@
           font-weight: 900;
         }
         ul {
-          display: none;
+          position: absolute;
+          top: 0;
+          height: 0;
+          overflow: hidden;
         }
         &.active,
         &.depth-active {
@@ -63,25 +66,38 @@
 
         // pc
         @include mediaQuery($deviceLarge){
+          ul {
+            transition: top .3s ease-in-out;
+            li {
+              height: 0;
+              margin-bottom: 0;
+              opacity: 0;
+              transition: all .3s ease-in-out;
+              a {
+                color: rgba(255, 255, 255, 0.6);
+              }
+            }
+          }
           &.active,
           &:hover {
             position: relative;
             ul {
-              display: block;
-              position: absolute;
               top: 27px;
               left: 50%;
               width: 260px;
+              height: auto;
               margin-left: -130px;
               padding-top: 23px;
               text-align: center;
               li {
+                height: 22px;
                 margin: 0 0 12px 0;
+                opacity: 1;
                 a {
-                  color: rgba(255, 255, 255, 0.6);
                   font-size: rem(18);
                   font-weight: 900;
                   line-height: 1.2;
+                  transition: all .3s ease-in-out;
                   &.active,
                   &:hover {
                     color: #fff;
@@ -184,9 +200,11 @@
             display: block;
             position: static;
             width: auto;
+            height: auto;
             margin: 0 0 0 0;
             padding: 10px 0 5px 0;
             text-align: left;
+            opacity: 1;
             li {
               margin: 0 0 8px 0;
               a {

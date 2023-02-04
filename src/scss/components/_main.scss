@@ -101,7 +101,7 @@
   .section-simulation {
     position: relative;
     margin: -703px 0 0;
-    padding: 290px 0 66px 0;
+    padding: 290px 0 166px 0;
     .bg {
       position: absolute;
       top: 0;
@@ -118,10 +118,12 @@
 
     .simulation-box {
       padding: 90px 0 160px 0;
+      overflow: hidden;
       .list {
-        .slick-slide {
-          position: relative;
-          padding: 0 11px;
+        transition-duration: 1s;
+        transition-timing-function: linear;
+        .swiper-slide {
+          cursor: pointer;
           &:nth-child(odd) {
             margin-top: 42px;
           }
@@ -132,8 +134,8 @@
         .dark {
           position: absolute;
           top: 0;
-          left: 11px;
-          right: 11px;
+          left: 0;
+          right: 0;
           bottom: 0;
           background: linear-gradient(180deg, rgba(47, 47, 47, 0) 0%, #000000 100%);
           border-radius: 10px;
@@ -162,15 +164,12 @@
       @include mediaQuery($deviceSmall){
         padding: 40px 0 60px 0;
         .list {
-          .slick-slide {
-            padding: 0 5px;
+          .swiper-slide {
             &:nth-child(odd) {
               margin-top: 19px;
             }
           }
           .dark {
-            left: 5px;
-            right: 5px;
             border-radius: 5px;
           }
           .text-box {
@@ -193,8 +192,11 @@
     .mall-box {
       max-width: 980px;
       margin: 0 auto;
-      padding: 100px 0 0 0;
+      padding: 80px 0 0 0;
       z-index: 2;
+      > img {
+        width: 100%;
+      }
       .big {
         img {
           width: 100%;
@@ -213,7 +215,7 @@
 
       // mobile
       @include mediaQuery($deviceSmall){
-        padding: 40px 20px 0 20px;
+        padding: 20px 20px 0 20px;
         .thumbnail {
           margin-top: 8px;
           li {
@@ -240,7 +242,7 @@
   .section-education {
     position: relative;
     height: 1343px;
-    margin: -300px 0 0 0;
+    margin: -400px 0 0 0;
     padding: 400px 0 0 0;
     .bg {
       position: absolute;
@@ -249,6 +251,7 @@
       right: 0;
       height: 1343px;
       background: url("../images/bg_main_edu.png") no-repeat center 0;
+      background-size: cover;
       overflow: hidden;
       &:after {
         content: '';
@@ -313,12 +316,16 @@
     // mobile
     @include mediaQuery($deviceSmall){
       height: auto;
-      padding: 365px 0 120px 0;
+      padding: 420px 0 120px 0;
       .bg {
         height: 100%;
         &:after {
           right: -840px;
         }
+      }
+      .title-box-1 {
+        position: relative;
+        z-index: 2;
       }
 
       .edu-box {

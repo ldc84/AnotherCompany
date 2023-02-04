@@ -20,9 +20,15 @@
     padding-right: 0;
     > span {
       display: block;
-      width: 100%;
+      width: 0;
       height: 18px;
       background-color: #fff;
+      transition: all 1s .3s ease-in-out;
+    }
+    &.aos-animate {
+      > span {
+        width: 100%;
+      }
     }
   }
 

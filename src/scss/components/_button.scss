@@ -41,6 +41,7 @@ input[type='submit'] {
 
   appearance: none;
 
+  position: relative;
   display: inline-block;
   box-sizing: border-box;
   text-align: center;
@@ -53,17 +54,73 @@ input[type='submit'] {
   font-weight: 700;
   line-height: 67px;
   text-align: center;
-  transition: all ease-in-out 300ms;
+  transition: all ease-in-out 600ms;
   outline: none;
+  overflow: hidden;
 
   // color
   &.color-1 {
     color: #fff;
     border: 1px solid #fff;
+
+    > span {
+      position: relative;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      transition: all ease-in-out 600ms;
+    }
+
+    // pc
+    @include mediaQuery($deviceLarge){
+      &:hover {
+        color: $color-point-1;
+        &:before {
+          box-shadow: 0 0 40px 40px #fff inset;
+        }
+      }
+      &.type-1:hover {
+        color: $color-point-2;
+      }
+    }
   }
   &.color-2 {
     color: #242424;
     border: 1px solid #242424;
+
+    > span {
+      position: relative;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      transition: all ease-in-out 600ms;
+    }
+
+    // pc
+    @include mediaQuery($deviceLarge){
+      &:hover {
+        color: #fff;
+        &:before {
+          box-shadow: 0 0 40px 40px #242424 inset;
+        }
+      }
+    }
   }
 
   // size

@@ -28,6 +28,10 @@
 		$(window).on('load', function () {
       AOS.refresh();
     });
+    document.addEventListener('aos:in:inview', function(e) {
+      // e.detail.classList.add('text-red');
+      console.log('test');
+    });
     
   });
 
