@@ -83,10 +83,29 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 38px 0 38px 0;
+      color: #fff;
+
+      .foot-text {
+        width: 385px;
+        margin-top: 20px;
+        p,
+        address {
+          display: inline-block;
+          margin-right: 14px;
+          font-style: normal;
+          font-size: rem(14);
+          font-weight: 100;
+          line-height: 1.4;
+          strong {
+            font-weight: 700;
+          }
+        }
+      }
+
       .foot-link {
         position: absolute;
         top: 38px;
-        left: 635px;
+        right: 0;
         display: flex;
         li {
           margin: 0 20px;
@@ -100,13 +119,14 @@
       }
     }
     h2 {
-      img {
-        width: 256px;
-      }
+      font-size: rem(20);
+      font-weight: 700;
     }
     .copy {
-      margin-top: 13px;
-      color: #fff;
+      position: absolute;
+      top: 89px;
+      right: 0;
+      color: #A391BA;
       font-size: rem(16);
     }
   }
@@ -159,14 +179,24 @@
         .foot-link {
           display: none;
         }
-      }
-      h2 {
-        img {
-          width: 183px;
+        .foot-text {
+          width: 100%;
+          margin-top: 20px;
+          p,
+          address {
+            display: block;
+            margin-right: 0;
+            font-size: rem(12);
+          }
         }
       }
+      h2 {
+        font-size: rem(15);
+      }
       .copy {
+        position: static;
         margin-top: 20px;
+        padding: 0 15%;
         font-size: rem(12);
       }
     }

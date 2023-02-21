@@ -48,7 +48,7 @@
           color: #fff;
           font-family: 'Noto Sans KR';
           font-size: rem(18);
-          font-weight: 900;
+          font-weight: 700;
         }
         ul {
           position: absolute;
@@ -95,7 +95,7 @@
                 opacity: 1;
                 a {
                   font-size: rem(18);
-                  font-weight: 900;
+                  font-weight: 700;
                   line-height: 1.2;
                   transition: all .3s ease-in-out;
                   &.active,
@@ -107,6 +107,7 @@
             }
           }
         }
+        
       }
     }
   }
@@ -161,7 +162,7 @@
       background-color: $color-point-1;
       opacity: 0;
       transform: translateY(-100%);
-      transition: all .3s ease-in-out;
+      transition: opacity .3s ease-in-out;
       &:before {
         content: '';
         position: absolute;
@@ -185,34 +186,37 @@
             align-items: center;
             height: 28px;
             padding: 0 4px;
-            color: #fff;
+            color: #B7A1C4;
             font-family: 'Noto Sans KR';
             font-size: rem(16);
             font-weight: 900;
           }
-          &.active {
+          &.active,
+          &.depth-active {
             > a {
-              color: #000;
-              background-color: #fff;
+              color: #fff;
+              background-color: transparent;
             }
           }
-          ul {
-            display: block;
-            position: static;
-            width: auto;
-            height: auto;
-            margin: 0 0 0 0;
-            padding: 10px 0 5px 0;
-            text-align: left;
-            opacity: 1;
-            li {
-              margin: 0 0 8px 0;
-              a {
-                color: rgba(255, 255, 255, 0.6);
-                font-size: rem(14);
-                background-color: transparent;
-                &.active {
-                  color: #fff;
+          &.depth-active {
+            ul {
+              display: block;
+              position: static;
+              width: auto;
+              height: auto;
+              margin: 0 0 0 0;
+              padding: 10px 0 0 13px;
+              text-align: left;
+              opacity: 1;
+              li {
+                margin: 0 0 8px 0;
+                a {
+                  color: rgba(255, 255, 255, 0.6);
+                  font-size: rem(14);
+                  background-color: transparent;
+                  &.active {
+                    color: #fff;
+                  }
                 }
               }
             }
