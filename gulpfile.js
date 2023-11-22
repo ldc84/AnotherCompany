@@ -18,8 +18,10 @@
     newer         = require('gulp-newer'),
     size          = require('gulp-size'),
     base64        = require('gulp-base64'),
-    imagemin      = require('gulp-imagemin'),
-    sass          = require('gulp-sass'),
+    // imagemin      = require('gulp-imagemin'),
+    gulpSass      = require('gulp-sass'),
+    nodeSass      = require('node-sass'),
+    sass          = gulpSass(nodeSass),
     postcss       = require('gulp-postcss'),
     cachebust     = require('gulp-cache-bust'),
     preprocess    = require('gulp-preprocess'),
@@ -66,7 +68,7 @@
   function images() {
     return gulp.src(imgConfig.src)
       .pipe(newer(imgConfig.build))
-      .pipe(imagemin(imgConfig.minOpts))
+      // .pipe(imagemin(imgConfig.minOpts))
       .pipe(size({ showFiles:true }))
       .pipe(gulp.dest(imgConfig.build));
   }
