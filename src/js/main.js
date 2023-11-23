@@ -145,10 +145,10 @@
       var top = win.scrollTop();
       if(top + win.height() >= $('.edu-box').offset().top && counterFlag){
 
-        textAnimation(1048, campBox.eq(0).find(' > div').eq(0).find('strong'), 2500, 0);
-        textAnimation(248522, campBox.eq(0).find(' > div').eq(1).find('strong'), 3500, 500);
-        textAnimation(536, campBox.eq(1).find(' > div').eq(0).find('strong'), 2500, 1000);
-        textAnimation(128957, campBox.eq(1).find(' > div').eq(1).find('strong'), 3500, 1500);
+        textAnimation(2596, campBox.eq(0).find(' > div').eq(0).find('strong'), 2500, 0);
+        textAnimation(471076, campBox.eq(0).find(' > div').eq(1).find('strong'), 3500, 500);
+        textAnimation(1012, campBox.eq(1).find(' > div').eq(0).find('strong'), 2500, 1000);
+        textAnimation(243000, campBox.eq(1).find(' > div').eq(1).find('strong'), 3500, 1500);
         
         counterFlag = false;
       }
