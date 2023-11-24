@@ -1,0 +1,36 @@
+.popup {
+  position: fixed;
+  top: 140px;
+  right: 50%;
+  margin-right: -600px;
+  z-index: 9999;
+
+  .image {
+    img {
+      width: 100%;
+    }
+  }
+  .pop-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 16px;
+    height: 16px;
+    background: url("../images/ico_close.svg") no-repeat center center;
+    background-size: cover;
+  }
+  .today-close {
+    margin-top: 13px;
+    text-align: right;
+    a {
+      padding-left: 29px;
+      color: #fff;
+      font-family: 'Noto Sans KR';
+      font-size: rem(18);
+      font-weight: 700;
+      text-shadow: 0px 1px 7px rgba(0, 0, 0, 0.80);
+      background: url("../images/ico_checkbox.svg") no-repeat 0 0;
+      background-size: 29px auto;
+    }
+  }
+}

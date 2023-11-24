@@ -24,6 +24,31 @@ body {
   margin:0 auto;
 }
 
+// floating
+.floating-talk {
+  position: fixed;
+  bottom: 10px;
+  right: 50px;
+  a {
+    display: flex;
+    align-items: center;
+    img {
+      position: relative;
+    }
+    span {
+      display: flex;
+      align-items: center;
+      height: 51px;
+      margin-left: -39px;
+      padding: 0 20px 0 44px;
+      font-family: 'Noto Sans KR';
+      font-size: rem(18);
+      background-color: #fff;
+      border-radius: 30px;
+    }
+  }
+}
+
 .pc-only {
   // mobile
   @include mediaQuery($deviceSmall){
